@@ -2,16 +2,19 @@ import React from "react";
 import {CardCharactersProps, CharacterStatusBadgeProps} from "../interfaces";
 import {Character} from "../types";
 import Link from "next/link";
+import Image from "next/image";
 
 const Card: React.FC<Character> = ({id, name, status, image}) => (
 	<Link
 		href={`/characters/${id}`}
 		className="max-w-xs p-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
 	>
-		<img
-			className="rounded-lg mx-auto mt-1"
-			width={230}
+		<Image
 			src={image}
+			width={230}
+			height={230}
+			quality={100}
+			className="rounded-lg mx-auto mt-1"
 			alt="image-character"
 		/>
 

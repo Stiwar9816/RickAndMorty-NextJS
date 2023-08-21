@@ -29,8 +29,6 @@ export const UIProvider = ({children}: any) => {
 	};
 
 	const handleFilter = (queryParam: any) => {
-		console.log("handleFilter query", queryParam);
-		console.log("state searchInput", state.searchInput);
 		dispatch({type: "FILTER_DATA", payload: queryParam});
 	};
 
